@@ -123,10 +123,10 @@
 			<available file="php" filepath="${env.PATH}" />
 			<then>
 				<if>
-					<available file="example.config.php" type="file" />
+					<available file="config.php" type="file" />
 					<then>
 						<antcall target="syntax-check">
-							<param name="file" value="example.config.php"/>
+							<param name="file" value="config.php"/>
 						</antcall>
 					</then>
 				</if>
@@ -227,7 +227,7 @@
 				<include name="php/daemon/*.pl"/>
 				<!-- include config and systemd service example -->
 				<include name="kopano_fetchmail.service.example"/>
-				<include name="example.config.php"/>
+				<include name="config.php"/>
 				<!-- exclude the ant script -->
 				<exclude name="build.xml"/>
 				<!-- CSS is generated during build -->
